@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
+import { cn } from "@/lib/utils";
+import GridPattern from "@/components/magicui/grid-pattern";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cn(GeistSans.variable, "font-sans")}>
+      <GridPattern className="-z-10 opacity-70" width={60} height={60} />
+      {children}
+      </body>
     </html>
   );
 }
