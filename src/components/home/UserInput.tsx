@@ -27,8 +27,8 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { Info, Loader2 } from "lucide-react";
 import { Textarea } from "../ui/textarea";
 import { Switch } from "../ui/switch";
-import { generateBio } from "@/app/actions";
-import { BioContext } from "@/context/BioContext";  
+import { generateBio } from "@/app/action";
+import { BioContext } from "@/contex/BioContext";
 
 const formSchema = z.object({
   model: z.string().min(1, "Model is required!"),
